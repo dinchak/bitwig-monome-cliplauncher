@@ -43,6 +43,7 @@ SerialOSC.prototype.receiveOSC = function (msg) {
   }
   if (msg.address.indexOf('/sys/prefix') != -1) {
     this.device.prefix = msg.values[0];
+    this.device.clear();
   }
   if (msg.address.indexOf('/sys/size') != -1) {
     this.device.sizeX = msg.values[0];

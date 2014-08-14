@@ -17,6 +17,10 @@ Device.prototype.led = function (x, y, s) {
   this.sendOSC(this.prefix + '/grid/led/set', x, y, s);
 };
 
+Device.prototype.clear = function () {
+  this.sendOSC(this.prefix + '/grid/led/all', 0);
+};
+
 Device.prototype.sendOSC = function () {
   var msg = this.config.serialosc.createOSCMessage(Array.prototype.slice.call(arguments, 0));
   host.sendDatagramPacket(this.config.serialosc.config.serialoscHost, this.config.devicePort, msg);

@@ -3,7 +3,7 @@ loadAPI(1);
 load('Framework4Bitwig/helper/ClassLoader.js');
 load('osc/SerialOSC.js');
 
-host.defineController ("monome", "grid", "1.0", "431000e0-2322-11e4-8c21-0800200c9a66");
+host.defineController ("monome", "cliplauncher", "1.0", "431000e0-2322-11e4-8c21-0800200c9a66");
 host.defineMidiPorts(1, 0);
 
 var SERIALOSC_HOST = '127.0.0.1';
