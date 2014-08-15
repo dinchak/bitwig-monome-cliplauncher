@@ -6,7 +6,7 @@ function Device(config) {
 }
 
 Device.prototype.handleMessage = function (msg) {
-  if (msg.address.indexOf('/press')) {
+  if (msg.address.indexOf('/grid/key') != -1) {
     if (msg.values[2] == 1) {
       this.config.serialosc.trackbank.getTrack(msg.values[0]).getClipLauncher().launch(msg.values[1]);
     }
